@@ -1,10 +1,10 @@
-import 'package:code_editor/code_editor.dart';
-import 'package:code_text_field/code_text_field.dart';
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_highlight/flutter_highlight.dart';
-import 'package:flutter_highlight/themes/darcula.dart';
-import 'package:flutter_highlight/themes/dark.dart';
-import 'package:highlight/languages/dart.dart';
+import 'package:layout_practice_plant_app/models/plant_model.dart';
+import 'package:layout_practice_plant_app/screens/details_plant/details_screen.dart';
+import 'package:layout_practice_plant_app/screens/home/home_screen.dart';
+import 'package:layout_practice_plant_app/utils/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,105 +16,49 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Plant App - layout practice',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: kBackgroundColor,
+        primaryColor: kPrimaryColor,
+        textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      onGenerateRoute: (RouteSettings settings) {
+        log(settings.name ?? '', name: "Navigator");
+        switch (settings.name) {
+          case '/':
+            return MaterialPageRoute(
+              builder: (BuildContext context) => const HomeScreen(),
+            );
+          case '/details_plant':
+            return MaterialPageRoute(
+              builder: (BuildContext context) => DetailsPlantScreen(
+                plantModel: settings.arguments as PlantModel,
+              ),
+            );
+          default:
+            return MaterialPageRoute(
+                builder: (BuildContext context) => const ErrorScreen());
+        }
+      },
+      initialRoute: '/',
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    // Navigator.push(context, MaterialPageRoute(builder: (context) {
-    //   return MyScreen();
-    // }));
-    setState(() {
-      _counter++;
-    });
-  }
+class ErrorScreen extends StatelessWidget {
+  const ErrorScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+    return const Scaffold(
+      body: Column(
+        children: [
+          Text('Error Navigator'),
+          SizedBox(height: 15),
+          BackButton(),
+        ],
       ),
-      body: SingleChildScrollView(
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              // const Text(
-              //   'You have pushed the button this many times:',
-              // ),
-              // Text(
-              //   '$_counter',
-              //   style: Theme.of(context).textTheme.headlineMedium,
-              // ),
-              HighlightView(
-                '''void _incrementCounter() {
-    Navigator.push(context, MaterialPageRoute(builder: (context) {
-        return MyScreen();
-    }));
-    setState(() {
-    _counter++;
-
-    });
-  }''',
-                language: 'dart',
-                theme: darculaTheme,
-                padding: const EdgeInsets.all(12),
-              ),
-              CodeEditor(
-                model: EditorModel(files: [
-                  FileEditor(
-                    language: 'dart',
-                    code: '''void _incrementCounter() {
-    // Navigator.push(context, MaterialPageRoute(builder: (context) {
-    //   return MyScreen();
-    // }));
-    setState(() {
-    _counter++;
-
-    });
-  }''',
-                  ),
-                ]),
-              ),
-            ],
-          ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  }
-
-  @override
-  void didUpdateWidget(covariant MyHomePage oldWidget) {
-    print('didUpdateWidget');
-    super.didUpdateWidget(oldWidget);
-  }
-
-  @override
-  void didChangeDependencies() {
-    print('didChangeDependencies');
-    super.didChangeDependencies();
   }
 }
