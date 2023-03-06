@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:layout_practice_plant_app/models/plant_model.dart';
-import 'package:layout_practice_plant_app/screens/details_plant/details_screen.dart';
+import 'package:layout_practice_plant_app/screens/details_plant/details_plants_screen.dart';
 import 'package:layout_practice_plant_app/screens/home/home_screen.dart';
 import 'package:layout_practice_plant_app/utils/constants.dart';
 
@@ -24,13 +24,13 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       onGenerateRoute: (RouteSettings settings) {
-        log(settings.name ?? '', name: "Navigator");
+        log('${settings.name} - ${settings.arguments}', name: "Navigator");
         switch (settings.name) {
           case '/':
             return MaterialPageRoute(
               builder: (BuildContext context) => const HomeScreen(),
             );
-          case '/details_plant':
+          case '/details_plant_screen':
             return MaterialPageRoute(
               builder: (BuildContext context) => DetailsPlantScreen(
                 plantModel: settings.arguments as PlantModel,

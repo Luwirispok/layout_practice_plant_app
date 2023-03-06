@@ -78,7 +78,7 @@ class SearchTextField extends StatelessWidget {
               BoxShadow(
                 offset: const Offset(0, 10),
                 blurRadius: 50,
-                color: kPrimaryColor.withOpacity(0.23),
+                color: kPrimaryColor.withOpacity(0.3),
               )
             ]),
         child: Row(
