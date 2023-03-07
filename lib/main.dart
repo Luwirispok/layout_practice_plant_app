@@ -1,13 +1,18 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:layout_practice_plant_app/models/plant_model.dart';
 import 'package:layout_practice_plant_app/screens/details_plant/details_plant_screen.dart';
 import 'package:layout_practice_plant_app/screens/home/home_screen.dart';
 import 'package:layout_practice_plant_app/utils/constants.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+
+
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(MyApp()));
 }
 
 class MyApp extends StatelessWidget {

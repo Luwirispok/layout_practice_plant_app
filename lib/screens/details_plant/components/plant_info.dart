@@ -25,7 +25,7 @@ class PlantInfo extends StatelessWidget {
                   maxLines: 1,
                   softWrap: false,
                   style: const TextStyle(
-                    fontSize: 35,
+                    fontSize: 32,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -35,7 +35,7 @@ class PlantInfo extends StatelessWidget {
                   maxLines: 1,
                   softWrap: false,
                   style: const TextStyle(
-                    fontSize: 25,
+                    fontSize: 22,
                     color: kPrimaryColor,
                     fontWeight: FontWeight.w300,
                   ),

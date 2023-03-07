@@ -11,6 +11,7 @@ class Body extends StatelessWidget {
     return const Column(
       children: [
         ButtonDetailsAndImage(),
+        const SizedBox(height: 10),
         PlantInfo(),
         ButtonBuyAndDescription(),
       ],

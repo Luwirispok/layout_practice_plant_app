@@ -14,7 +14,7 @@ class ImagePlant extends StatelessWidget {
       tag: plantModel.id,
       child: Container(
         height: size.height * 0.7,
-        width: size.width * 0.7,
+        width: size.width * 0.6,
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(63),
