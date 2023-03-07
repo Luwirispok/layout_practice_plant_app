@@ -14,7 +14,6 @@ class RecommendedPlantCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Size size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -42,7 +41,7 @@ class RecommendedPlantCart extends StatelessWidget {
                 child: Image.asset(
                   width: 170,
                   height: 200,
-                  fit: BoxFit.fitWidth,
+                  fit: BoxFit.cover,
                   plantModel.image,
                 ),
               ),
@@ -53,22 +52,31 @@ class RecommendedPlantCart extends StatelessWidget {
                 // mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        plantModel.title.toUpperCase(),
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w500,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          plantModel.title.toUpperCase(),
+                          overflow: TextOverflow.fade,
+                          maxLines: 1,
+                          softWrap: false,
+                          style: const TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                      Text(
-                        plantModel.country,
-                        style: const TextStyle(fontSize: 12),
-                      ),
-                    ],
+                        Text(
+                          plantModel.country,
+                          overflow: TextOverflow.fade,
+                          maxLines: 1,
+                          softWrap: false,
+                          style: const TextStyle(fontSize: 12),
+                        ),
+                      ],
+                    ),
                   ),
+                  const SizedBox(width: 7),
                   Text(
                     '\$${plantModel.price}',
                     style: const TextStyle(

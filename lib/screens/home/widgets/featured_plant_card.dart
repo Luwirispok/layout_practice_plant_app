@@ -35,9 +35,12 @@ class FeaturedPlantCard extends StatelessWidget {
         ),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20),
-          child: Image.asset(
-            fit: BoxFit.cover,
-            plantModel.image,
+          child: Hero(
+            tag: plantModel.id,
+            child: Image.asset(
+              fit: BoxFit.cover,
+              plantModel.image,
+            ),
           ),
         ),
       ),

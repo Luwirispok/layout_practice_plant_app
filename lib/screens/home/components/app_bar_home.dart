@@ -10,8 +10,7 @@ class AppBarHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(
-          top: 30, bottom: kDefaultPadding / 2, left: kDefaultPadding),
+      padding: const EdgeInsets.only(top: 50, bottom: kDefaultPadding / 2, left: kDefaultPadding),
       alignment: Alignment.centerLeft,
       width: double.infinity,
       color: kPrimaryColor,
@@ -20,7 +19,7 @@ class AppBarHome extends StatelessWidget {
           log('AppBar - Menu button', name: 'HomeScreen');
         },
         child: SvgPicture.asset(
-          menu,
+          iconsMenu,
         ),
       ),
     );

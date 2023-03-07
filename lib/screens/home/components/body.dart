@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layout_practice_plant_app/screens/home/components/list_featured_plants.dart';
 import 'package:layout_practice_plant_app/screens/home/components/list_recommended_plants.dart';
-import 'package:layout_practice_plant_app/screens/home/components/title_with_more_button.dart';
+import 'package:layout_practice_plant_app/screens/home/widgets/title_with_more_button.dart';
 
 import 'header_and_search.dart';
 
