@@ -1,16 +1,26 @@
-# layout_practice_plant_app
+# Plant App
 
-A new Flutter project.
+Practice design layout. Inspired in the [video from Youtube](https://youtu.be/LN668OAUrK4) and the [GIT](https://github.com/abuanwar072/Plant-App-Flutter-UI).
 
-## Getting Started
+**Packages we are using:**
 
-This project is a starting point for a Flutter application.
+- flutter_svg: [link](https://pub.dev/packages/flutter_svg)
 
-A few resources to get you started if this is your first Flutter project:
+Practice creating a custom plant sales app on Flutter.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The home page (HomeScreen) has search, navigation, and recommendation lists.
+Clicking on the card of one of the plants opens a page with detailed information (DetailsPlantsScreen) about the plant. It contains detail buttons (empty), a picture, and purchase buttons.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project took 12 and a half hours to complete.
+
+## GIF
+<p align="center">
+<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/demo21.gif" height="700">
+</p>
+
+## Screenshots
+<p>
+<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/1.png" width="350">
+<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/2.png" width="350">
+<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/3.png" width="350">
+</p>
