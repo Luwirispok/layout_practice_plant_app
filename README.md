@@ -20,7 +20,7 @@ This project took 12 and a half hours to complete.
 
 ## Screenshots
 <p>
-<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/1.png" width="350">
-<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/2.png" width="350">
-<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/3.png" width="350">
+<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/1.png" width="300">
+<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/2.png" width="300">
+<img src="https://github.com/Luwirispok/layout_practice_plant_app/blob/master/screenshots/3.png" width="300">
 </p>
