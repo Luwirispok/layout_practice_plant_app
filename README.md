@@ -1,4 +1,4 @@
-# Plant App
+# Layout practice Plant App
 
 Practice design layout. Inspired in the [video from Youtube](https://youtu.be/LN668OAUrK4) and the [GIT](https://github.com/abuanwar072/Plant-App-Flutter-UI).
 

@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:layout_practice_plant_app/models/plant_model.dart';
-import 'package:layout_practice_plant_app/screens/details_plant/details_plants_screen.dart';
+import 'package:layout_practice_plant_app/screens/details_plant/details_plant_screen.dart';
 import 'package:layout_practice_plant_app/screens/home/home_screen.dart';
 import 'package:layout_practice_plant_app/utils/constants.dart';
 
