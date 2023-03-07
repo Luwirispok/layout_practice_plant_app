@@ -25,7 +25,7 @@ class ButtonDetailsPlant extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
           boxShadow: [
             BoxShadow(
-              offset: const Offset(0, 5),
+              offset: const Offset(0, 15),
               blurRadius: 22,
               color: kPrimaryColor.withOpacity(0.22),
             ),
@@ -33,6 +33,7 @@ class ButtonDetailsPlant extends StatelessWidget {
               offset: Offset(-15, -15),
               blurRadius: 10,
               color: Colors.white,
+
             ),
           ],
         ),
